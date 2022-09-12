@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         element.accessibilityIdentifier = "button1"
         element.imageView?.layer.borderWidth = 1
         element.imageView?.layer.borderColor = UIColor.lightGray.cgColor
+        element.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         return element
    }()
 
@@ -26,6 +27,8 @@ class ViewController: UIViewController {
         element.accessibilityIdentifier = "button2"
         element.imageView?.layer.borderWidth = 1
         element.imageView?.layer.borderColor = UIColor.lightGray.cgColor
+        element.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        element.tag = 1
         return element
    }()
     
@@ -36,6 +39,8 @@ class ViewController: UIViewController {
         element.accessibilityIdentifier = "button3"
         element.imageView?.layer.borderWidth = 1
         element.imageView?.layer.borderColor = UIColor.lightGray.cgColor
+        element.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        element.tag = 2
         return element
     }()
     
@@ -52,7 +57,7 @@ class ViewController: UIViewController {
         askQuestion()
     }
     
-    func askQuestion() {
+    func askQuestion(_ sender: UIAlertAction! = nil) {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
 
@@ -61,6 +66,26 @@ class ViewController: UIViewController {
         button3.setImage(UIImage(named: countries[2]), for: .normal)
         
         title = countries[correctAnswer].uppercased()
+    }
+    
+    @objc func buttonTapped(_ sender: UIButton) {
+        var title: String
+        
+        if sender.tag == correctAnswer {
+            title = "That's correct!"
+            score += 1
+        } else {
+            title = "Ops! That's wrong."
+            score -= 1
+        }
+        
+        let dialogMessage = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
+        
+        let ok = UIAlertAction(title: "Continue", style: .default, handler: askQuestion)
+        
+        dialogMessage.addAction(ok)
+        
+        present(dialogMessage, animated: true, completion: nil)
     }
 
     func setupButtons() {
