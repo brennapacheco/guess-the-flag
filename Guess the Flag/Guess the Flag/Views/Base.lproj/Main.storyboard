@@ -16,34 +16,8 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhL-51-JFH">
-                                <rect key="frame" x="96" y="136" width="222" height="114"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="us"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1PQ-in-J9w">
-                                <rect key="frame" x="95" y="310" width="224" height="114"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="us"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytB-nZ-cat">
-                                <rect key="frame" x="95" y="481" width="224" height="114"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="us"/>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="ytB-nZ-cat" firstAttribute="centerX" secondItem="1PQ-in-J9w" secondAttribute="centerX" id="0dk-Zh-HH4"/>
-                            <constraint firstItem="ytB-nZ-cat" firstAttribute="top" secondItem="1PQ-in-J9w" secondAttribute="bottom" constant="57" id="8Cu-Qv-aPm"/>
-                            <constraint firstItem="1PQ-in-J9w" firstAttribute="centerX" secondItem="EhL-51-JFH" secondAttribute="centerX" id="9jV-Hf-iYn"/>
-                            <constraint firstItem="EhL-51-JFH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="CWd-y4-bNG"/>
-                            <constraint firstItem="EhL-51-JFH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96" id="K3W-TM-gtt"/>
-                            <constraint firstItem="1PQ-in-J9w" firstAttribute="top" secondItem="EhL-51-JFH" secondAttribute="bottom" constant="60" id="nsr-2d-OcN"/>
-                            <constraint firstItem="EhL-51-JFH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="twx-By-otR"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tMM-hb-Fdz"/>
                 </viewController>
@@ -71,7 +45,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="us" width="200" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
