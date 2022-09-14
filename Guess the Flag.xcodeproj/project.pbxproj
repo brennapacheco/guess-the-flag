@@ -13,9 +13,11 @@
 		6533CE9128CB748A009EC26D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6533CE8F28CB748A009EC26D /* Main.storyboard */; };
 		6533CE9328CB748C009EC26D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6533CE9228CB748C009EC26D /* Assets.xcassets */; };
 		6533CE9628CB748C009EC26D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6533CE9428CB748C009EC26D /* LaunchScreen.storyboard */; };
+		863AC37791D8A35272A6EE70 /* Pods_Guess_the_Flag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F5809ACE9CE34428BB9823C /* Pods_Guess_the_Flag.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F3390DA6988943D7A5C032C /* Pods-Guess the Flag.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guess the Flag.release.xcconfig"; path = "Target Support Files/Pods-Guess the Flag/Pods-Guess the Flag.release.xcconfig"; sourceTree = "<group>"; };
 		6533CE8628CB748A009EC26D /* Guess the Flag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guess the Flag.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6533CE8928CB748A009EC26D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6533CE8B28CB748A009EC26D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		6533CE9228CB748C009EC26D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6533CE9528CB748C009EC26D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6533CE9728CB748C009EC26D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F5809ACE9CE34428BB9823C /* Pods_Guess_the_Flag.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Guess_the_Flag.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBFF6823CFA741B1F8F3DDC0 /* Pods-Guess the Flag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guess the Flag.debug.xcconfig"; path = "Target Support Files/Pods-Guess the Flag/Pods-Guess the Flag.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				863AC37791D8A35272A6EE70 /* Pods_Guess_the_Flag.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FEBE4720FBE65862DF0418C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EBFF6823CFA741B1F8F3DDC0 /* Pods-Guess the Flag.debug.xcconfig */,
+				0F3390DA6988943D7A5C032C /* Pods-Guess the Flag.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		6533CE7D28CB748A009EC26D = {
 			isa = PBXGroup;
 			children = (
 				6533CE8828CB748A009EC26D /* Guess the Flag */,
 				6533CE8728CB748A009EC26D /* Products */,
+				1FEBE4720FBE65862DF0418C /* Pods */,
+				815A009F92DF4423593F2F97 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +108,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		815A009F92DF4423593F2F97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F5809ACE9CE34428BB9823C /* Pods_Guess_the_Flag.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,9 +123,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6533CE9A28CB748C009EC26D /* Build configuration list for PBXNativeTarget "Guess the Flag" */;
 			buildPhases = (
+				13147528D92D77CF423D5025 /* [CP] Check Pods Manifest.lock */,
 				6533CE8228CB748A009EC26D /* Sources */,
 				6533CE8328CB748A009EC26D /* Frameworks */,
 				6533CE8428CB748A009EC26D /* Resources */,
+				8E18F6975C79D801FE2EBD2F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,6 +183,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13147528D92D77CF423D5025 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Guess the Flag-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E18F6975C79D801FE2EBD2F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Guess the Flag/Pods-Guess the Flag-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Guess the Flag/Pods-Guess the Flag-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Guess the Flag/Pods-Guess the Flag-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6533CE8228CB748A009EC26D /* Sources */ = {
@@ -306,6 +375,7 @@
 		};
 		6533CE9B28CB748C009EC26D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBFF6823CFA741B1F8F3DDC0 /* Pods-Guess the Flag.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -335,6 +405,7 @@
 		};
 		6533CE9C28CB748C009EC26D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F3390DA6988943D7A5C032C /* Pods-Guess the Flag.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
