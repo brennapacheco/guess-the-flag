@@ -114,7 +114,7 @@ class ViewController: UIViewController {
                 score -= 1
             }
             
-            let dialogMessage = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
+            let dialogMessage = UIAlertController(title: title, message: "That's the flag of \(countries[sender.tag].uppercased()).", preferredStyle: .alert)
             
             let ok = UIAlertAction(title: "Continue", style: .default, handler: askQuestion)
             
