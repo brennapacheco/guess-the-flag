@@ -63,7 +63,6 @@ class ViewController: UIViewController {
     var countries = [String]()
     var score = 0
     var correctAnswer = 0
-    var scoreTitle = " | Score: "
     var questionsAsked = 0
     var confettiView = SwiftConfettiView()
     
@@ -71,7 +70,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
-        
+        setupRightBarButtonItem()
         setupButtons()
         askQuestion()
     }
@@ -84,7 +83,7 @@ class ViewController: UIViewController {
         button2.setImage(UIImage(named: countries[1]), for: .normal)
         button3.setImage(UIImage(named: countries[2]), for: .normal)
         
-        title = countries[correctAnswer].uppercased() + scoreTitle + String(score)
+        title = "Guess the flag of: " + countries[correctAnswer].uppercased()
     }
     
     @objc func buttonTapped(_ sender: UIButton) {
@@ -161,6 +160,20 @@ class ViewController: UIViewController {
     func removeConfetti() {
         self.confettiView.stopConfetti()
         self.confettiView.removeFromSuperview()
+    }
+    
+    func setupRightBarButtonItem() {
+        let scoreButton = UIBarButtonItem(image: UIImage(systemName: "flag.checkered"), style: .plain, target: self, action: #selector(scoreTapped))
+        navigationItem.rightBarButtonItems = [scoreButton]
+    }
+    
+    @objc func scoreTapped() {
+        let dialogMessage = UIAlertController(title: "Your score is:", message: "\(score)", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            self.navigationController?.popViewController(animated: true)
+        })
+        dialogMessage.addAction(ok)
+        self.present(dialogMessage, animated: true, completion: nil)
     }
     
     func setupButtons() {
